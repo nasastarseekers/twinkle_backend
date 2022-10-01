@@ -10,7 +10,7 @@ WORKDIR /home/web
 
 RUN mkdir /home/web/twinkle_backend
 
-ADD . /home/web/twinkle_backend
+ADD twinkle_backend/ /home/web/twinkle_backend/
 
 RUN python3 -m pip install -r twinkle_backend/requirements.txt
 
