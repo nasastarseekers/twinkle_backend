@@ -6,20 +6,19 @@ on:
     branches:
     - main
 
+env:
+ BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name: Checkout repository
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/} | sed 's/[^a-zA-Z0-9]/-/g'))"
-        id: extract_branch
       - uses: pmorelli92/github-container-registry-build-push@2.0.0
         name: Build and Publish
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: twinkle_backend
-          docker-image-tag: ${{ steps.extract_branch.outputs.branch }}
+          docker-image-tag: ${BRANCH_NAME}
           dockerfile-path: ./twinkle_backend/Dockerfile
