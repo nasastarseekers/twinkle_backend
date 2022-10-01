@@ -1,13 +1,7 @@
 on:
-  pull_request:
-    branches:
-    - main
   push:
     branches:
     - main
-
-env:
- BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
 
 jobs:
   build-and-publish:
@@ -20,5 +14,5 @@ jobs:
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: twinkle_backend
-          docker-image-tag: ${BRANCH_NAME}
+          docker-image-tag: latest
           dockerfile-path: ./twinkle_backend/Dockerfile
