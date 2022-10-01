@@ -1,8 +1,7 @@
+name: 'Deploy latest'
+
 on:
   push:
-    branches:
-    - main
-  pull_request:
     branches:
     - main
 
