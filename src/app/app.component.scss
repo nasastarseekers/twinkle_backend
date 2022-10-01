@@ -1,0 +1,66 @@
+body {
+  margin: 0 !important;
+}
+
+.app {
+  &__view {
+    background-image: url("/assets/images/star-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    &__star {
+      height: 50vh;
+      align-self: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  -webkit-animation: rotate 60s linear infinite;
+  -moz-animation: rotate 60s linear infinite;
+  -ms-animation: rotate 60s linear infinite;
+  -o-animation: rotate 60s linear infinite;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale {
+  -webkit-animation: scale 10s infinite;
+  -moz-animation: scale 10s infinite;
+  -ms-animation: scale 10s infinite;
+  -o-animation: scale 10s infinite;
+  animation: scale 10s infinite;
+}
