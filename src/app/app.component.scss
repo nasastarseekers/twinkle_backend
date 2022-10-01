@@ -3,11 +3,18 @@ body {
 }
 
 .app {
+  background: rgb(216, 174, 238);
+  background: radial-gradient(
+    circle,
+    rgba(216, 174, 238, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  
   &__view {
     background-image: url("/assets/images/star-background.png");
     background-repeat: no-repeat;
     background-position: center;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-self: center;

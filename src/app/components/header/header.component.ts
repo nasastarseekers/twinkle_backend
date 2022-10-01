@@ -1,7 +1,7 @@
 import { Component, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'twinkle-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
