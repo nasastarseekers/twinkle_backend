@@ -1,5 +1,6 @@
 {
      "files.trimFinalNewlines": true,
      "editor.trimAutoWhitespace": true,
-     "files.trimTrailingWhitespace": true
+     "files.trimTrailingWhitespace": true,
+     "cSpell.enabled": true
 }

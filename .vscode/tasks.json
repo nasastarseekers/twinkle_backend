@@ -6,7 +6,7 @@
         {
             "label": "Install twinkle_backend dep's",
             "type": "shell",
-            "command": "python -m pip install -r twinkle_backend/requierments.txt",
+            "command": "python -m pip install -r twinkle_backend/requirements.txt",
             "problemMatcher": []
         },
         {
